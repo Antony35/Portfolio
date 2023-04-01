@@ -1,0 +1,36 @@
+.reveal [class*='reveal-'] {
+  opacity: 0!important;
+  transform: translateY(30px)!important;
+}
+
+.reveal-bottom [class*='reveal-'] {
+  opacity: 0!important;
+  transform: translateY(-30px)!important;
+}
+
+[class*='reveal-'] {
+  transition: 800ms cubic-bezier(.5,.0,0,.1);
+}
+
+.reveal-2 {
+  transition-delay: 200ms;
+}
+
+.reveal-3 {
+  transition-delay: 400ms;
+}
+
+.reveal-4 {
+  transition-delay: 600ms;
+}
+
+.reveal-5 {
+  transition-delay: 800ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal [class*='reveal-'] {
+    opacity: 1!important;
+    transform: translateY(0px)!important;
+  }
+}
