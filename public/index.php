@@ -10,12 +10,13 @@ $_SESSION['random'] = $random;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/menuBurger.js" type="module" async ></script>
-  <script src="../js/scrollingAppearance.js" type="module"></script>
-  <script src="../js/scrollSpy.js" type="module"></script>
-  <script src="../js/projectInfo.js" type="module"></script>
-  <script src="../js/contact.js" type="module"></script>
+  <script src=".././dist/polyfill.bundle.js" type="module" ></script>
+  <script src=".././dist/main.bundle.js" type="module"></script>
+  <script src=".././dist/all.bundle.js" type="module"></script>
   <title>Portfolio</title>
 </head>
 <body>
@@ -32,8 +33,9 @@ $_SESSION['random'] = $random;
     </nav>
     <div data-spy class="presentation reveal">
       <h1 class="reveal-1">antony huart</h1>
-      <h2 class="reveal-2">integrateur web</h2>
-      <q class="reveal-3">Les détails font la perfection et la perfection n'est pas un détail.<br>Léonard de Vinci</q>
+      <h2 class="reveal-2">intégrateur web</h2>
+      <q class="reveal-3">Les détails font la perfection et la perfection n'est pas un détail.</q>
+      <p class="reveal-3">Léonard de Vinci</p>
     </div>
       <a href="#about">
         <div class="reveal">
@@ -45,7 +47,7 @@ $_SESSION['random'] = $random;
   
 <section id="about" data-spy>
   <article class="about reveal">
-    <div>
+    <div class="block-1">
       <h1 class="reveal-1">qui suis-je ?</h1>
       <div class="reveal-2">
         <p >Bonjour, je m’appelle Antony Huart. Je reviens d’un voyage de 3 ans qui fût riche en découvertes. C’est pendant cette période que j’ai commencé à me former en autodidacte au métier de développeur web. Passionné par l’informatique, c’est avec détermination que je souhaite me reconvertir dans ce secteur.
@@ -56,9 +58,12 @@ $_SESSION['random'] = $random;
     <div class="block-2">
       <h1 class="reveal-1">ma vision</h1>
       <div  class="reveal-2">
-        <p>Le développement web est, selon moi, la réalisation d’une idée rendue accessible à quiconque en aurait besoin.</p>
-        <p>Un métier où l’évolution et l’apprentissage sont sans limite.</p> 
-        <p>Un secteur où le partage et l’entraide sont omniprésents.</p>
+        <p>Le développement web est:<p>
+        <ul>
+          <li>la réalisation d’une idée rendue accessible à quiconque en aurait besoin ;</li>
+          <li>Un métier où l’évolution et l’apprentissage sont sans limite ;</li> 
+          <li>Un secteur où le partage et l’entraide sont omniprésents.</li>
+        </ul>
       </div>
     </div>
     <img class="reveal-3" src="../img/profil.png" alt="ma photo de portrait">
@@ -83,7 +88,7 @@ $_SESSION['random'] = $random;
 
 <section  id="contact" data-spy>
   <article class="reveal-1 contact">
-    <form method="POST" action="submit_contact.php">
+    <form  method="POST" action="submit_contact.php">
       <div>
         <label for="name">Votre Nom :</label>
         <input type="text" id="name" name="user_name" maxlength="26" required pattern="^[a-zA-Z\- áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$">
@@ -100,7 +105,7 @@ $_SESSION['random'] = $random;
       </div>
       <div>
         <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
-        <input class="submit-btn" id="submit" type="submit" name="submit-btn" value="Envoyer">
+        <button class="submit-btn" id="submit" type="submit" name="submit-btn">Envoyer</button>
         <input type="hidden" name="random" value="<?php echo($random) ?>">
       </div>
     </form>
@@ -109,6 +114,6 @@ $_SESSION['random'] = $random;
 </body>
 <footer>
   <p> © Copyright 2023 - Antony HUART. Tous droits réservés.</p>
-  <p><a href="#home">Accueil</a> | <a href="./mention.php ">Mentions légales</a></p> 
+  <p><a href="#home">Accueil</a> | <a href="./mention.php">Mentions légales</a></p> 
 </footer>
 </html>

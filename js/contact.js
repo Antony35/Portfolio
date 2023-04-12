@@ -1,20 +1,21 @@
-let userName    = document.getElementById('name');
-let nameError   = document.getElementById('name-error');
-let userEmail   = document.getElementById('email');
-let emailError  = document.getElementById('email-error');
+const userName    = document.getElementById('name');
+const nameError   = document.getElementById('name-error');
+const userEmail   = document.getElementById('email');
+const emailError  = document.getElementById('email-error');
+
 
 function nameValid(value) {
-let pattern = /^[a-zA-Z\- áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$/;
+const pattern = /^[a-zA-Z\- áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$/;
 return pattern.test(value);
 }
 
 function emailValid(value) {
-  let pattern = /^([a-z0-9.]+)@([a-z0-9]+)\.+([a-z]{1,4})$/;
+  const pattern = /^([a-z0-9.]+)@([a-z0-9]+)\.+([a-z]{1,4})$/;
   return pattern.test(value);
 }
 
 userName.addEventListener('input', function(e) {
-  let value = e.target.value; 
+  const value = e.target.value; 
   if(!nameValid(value)){
     nameError.style.display = 'inline';
   }
@@ -24,7 +25,7 @@ userName.addEventListener('input', function(e) {
 })
 
 userEmail.addEventListener('change', function(e) {
-  let value = e.target.value; 
+  const value = e.target.value; 
   if(!emailValid(value)){
     emailError.style.display = 'inline';
   }
