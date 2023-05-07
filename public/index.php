@@ -73,11 +73,11 @@ $_SESSION['random'] = $random;
 <section id="project" data-spy>
   <article class="container-project reveal">
     <h1 class="reveal-1">mes projets</h1>
-    <a href="https://github.com/Antony35/FirstBlogProject"><img class="reveal-2"src="../img/pagePrincipalBlog.png" alt="Page principal du projet blog voyage"></a>
-    <a href="#"><img class="reveal-2"src="../img/portfolio.png" alt="Page principale du projet portfolio"></a>
-    <a href="#"><img class="reveal-2"src="../img/prochainement.png" alt="future projet"></a>
-    <a href="#"><img class="reveal-3"src="../img/prochainement.png" alt="future projet"></a>
-    <a href="#"><img class="reveal-3"src="../img/prochainement.png" alt="future projet"></a>
+    <a href="https://github.com/Antony35/FirstBlogProject"><img class="reveal-2"src="../img/pagePrincipalBlog.png" alt="Page principal du projet blog voyage"><div class="container"></div></a>
+    <a href="https://github.com/Antony35/Portfolio"><img class="reveal-2"src="../img/portfolio.png" alt="Page principale du projet portfolio"><div class="container"></div></a>
+    <a href="https://github.com/Antony35/To-Do-List-JS"><img class="reveal-2"src="../img/TODO-List.PNG" alt="TODO-List"><div class="container"></div></a>
+    <a href="https://github.com/Antony35/La-maison-jungle"><img class="reveal-3"src="../img/LMJ.PNG" alt="future projet"><div class="container"></div></a>
+    <a href="#"><img class="reveal-3"src="../img/prochainement.png" alt="future projet"><div class="container"></div></a>
     <div class="reveal-3 info">
       <h1>Titre projet</h1>
       <h3>Description</h3>

@@ -173,6 +173,23 @@ nav {
     }
   }
 }
+a {
+  color: #fff;
+  text-decoration: none;
+.container {
+  @include medium-plus-screen {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E1D3E;
+  text-decoration: none;
+  gap: 5px;
+  padding: 10px 0;
+}
+}
 
 .container-project {
   display: flex;
@@ -246,9 +263,11 @@ nav {
 
 
 #contact {
-  min-height: 100vh;
-  max-height: 100vh;
-  padding-top: 30px;
+  padding: 20px;
+  @include medium-plus-screen {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
 }
 .contact {
   display: flex;
@@ -292,7 +311,7 @@ form {
   }
   .submit-btn {
     display: block;
-    width: 20%;
+    padding: 5px 10px;
     border-radius: 10rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -318,10 +337,11 @@ form {
 }
 
 .cv {
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   img {
     margin-top: 100px;
     max-width: 100vw;
