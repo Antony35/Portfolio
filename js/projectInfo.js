@@ -15,12 +15,15 @@ class info {
 }
 const infoText = new info('Project', 'Description', 'techno')
 const project1 = new info('We love the world', 'Ce blog raconte mes voyages.', 'html / css / sass / JS / webpack / php')
-const project2 = new info('Portfolio', 'Met en avant mes compétances', 'html / css / sass / JS / php')
+const project2 = new info('Portfolio', 'Présentation de mes projets', 'html / css / sass / JS / php')
 const project3 = new info('TODO List', 'Gestion de liste de tâche', 'html / css / JS')
 const project4 = new info('La maison jungle', 'Site d\'achat de plante', 'React')
-const project5 = new info('Project5', 'desc du project 5', 'techno')
+const project5 = new info('Hardware style', 'Page magasin réaliser pour la semaine de test à CEFIM', 'HTML / css / sass / JS')
+const project6 = new info('Design', 'Maquette trouver sur figma', 'HTML / css')
+const project7 = new info('Page de nike', 'Copie de la premiere page de nike', 'HTML / css / sass')
+const project8 = new info('Benjamin Code', 'Challenge Bajamin Code', 'HTML / css / sass / JS')
 
-const project = [project1, project2, project3, project4, project5]
+const project = [project1, project2, project3, project4, project5, project6, project7, project8]
 
 containers.forEach((container, index) => {
 	let title = document.createElement('h3')

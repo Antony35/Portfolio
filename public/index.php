@@ -24,18 +24,24 @@ $_SESSION['random'] = $random;
     <div id="open-btn" class="">
       <p class="burger-line"></p>
     </div>
-    <nav id="nav" class="">
-      <a class="" href="#home"></a>
-      <a class="" href="#about">a propos</a>
-      <a class="" href="#project">projet</a>
-      <a href="cv.php">cv</a>
-      <a class="" href="#contact">contact</a>
+    <nav id="nav" class="nav">
+      <div class="nav__network">
+        <a href="https://www.linkedin.com/in/antony-huart/"><img src="../img/linkedin.png" alt="logo linkedin"></a>
+        <a href="https://github.com/Antony35"><img src="../img/github.png" alt="logo github"></a>
+      </div>
+      <div class="nav__pages">
+        <a class="" href="#home"><img src="../img/technology.png" alt="home"></a>
+        <a class="" href="#about">a propos</a>
+        <a class="" href="#project">projet</a>
+        <a href="cv.php">cv</a>
+        <a class="" href="#contact">contact</a>
+      </div>
     </nav>
     <div data-spy class="presentation reveal">
       <h1 class="reveal-1">antony huart</h1>
-      <h2 class="reveal-2">intégrateur web</h2>
-      <q class="reveal-3">Les détails font la perfection et la perfection n'est pas un détail.</q>
-      <p class="reveal-3">Léonard de Vinci</p>
+      <h2 class="reveal-2">Développeur Web</h2>
+      <q class="reveal-3">Votre travail va occuper une grande partie de votre vie. La seule façon d'être vraiment satisfait est de faire ce que vous croyez être un excellent travail. Et la seule façon de faire un excellent travail est d'aimer ce que vous faites.</q>
+      <p class="reveal-3">Steve Jobs</p>
     </div>
       <a href="#about">
         <div class="reveal">
@@ -51,7 +57,7 @@ $_SESSION['random'] = $random;
       <h1 class="reveal-1">qui suis-je ?</h1>
       <div class="reveal-2">
         <p >Bonjour, je m’appelle Antony Huart. Je reviens d’un voyage de 3 ans qui fût riche en découvertes. C’est pendant cette période que j’ai commencé à me former en autodidacte au métier de développeur web. Passionné par l’informatique, c’est avec détermination que je souhaite me reconvertir dans ce secteur.
-        <p >En cours d’admission à l’école CEFIM, je suis à la recherche d’une agence web pour mon alternance du 25 septembre 2023 au 19 septembre 2024.</p>
+        <p >Admissible à l’école CEFIM, je suis à la recherche d’une entreprise pour mon alternance du 25 septembre 2023 au 19 septembre 2024.</p>
         <p>Objectif : obtenir le titre professionnel RNCP Bac +2, “Développeur web et web mobile”.</p>
       </div>
     </div>
@@ -75,14 +81,17 @@ $_SESSION['random'] = $random;
     <h1 class="reveal-1">mes projets</h1>
     <a href="https://github.com/Antony35/FirstBlogProject"><img class="reveal-2"src="../img/pagePrincipalBlog.png" alt="Page principal du projet blog voyage"><div class="container"></div></a>
     <a href="https://github.com/Antony35/Portfolio"><img class="reveal-2"src="../img/portfolio.png" alt="Page principale du projet portfolio"><div class="container"></div></a>
-    <a href="https://github.com/Antony35/To-Do-List-JS"><img class="reveal-2"src="../img/TODO-List.PNG" alt="TODO-List"><div class="container"></div></a>
-    <a href="https://github.com/Antony35/La-maison-jungle"><img class="reveal-3"src="../img/LMJ.PNG" alt="future projet"><div class="container"></div></a>
-    <a href="#"><img class="reveal-3"src="../img/prochainement.png" alt="future projet"><div class="container"></div></a>
+    <a href="https://todo-todo-list.netlify.app"><img class="reveal-2"src="../img/TODO-List.PNG" alt="TODO-List"><div class="container"></div></a>
+    <a href="https://j-u-n-gle-house.netlify.app"><img class="reveal-3"src="../img/LMJ.PNG" alt="maison jungle site de plante"><div class="container"></div></a>
+    <a href="https://hardware-style.netlify.app"><img class="reveal-3"src="../img/cefim-project.png" alt="project cefim page magasin"><div class="container"></div></a>
     <div class="reveal-3 info">
       <h1>Titre projet</h1>
       <h3>Description</h3>
       <h5>techno utiliser</h5>
     </div>
+    <a href="https://design-v1.netlify.app"><img class="reveal-4" src="../img/disignV1.PNG" alt="maquette 1"><div class="container"></div></a>
+    <a href="https://n-i-c-e.netlify.app"><img class="reveal-4" src="../img/nice.PNG" alt="maquette 2"><div class="container"></div></a>
+    <a href="https://benjamin-landing-page.netlify.app"><img class="reveal-4" src="../img/benjaminCode.PNG" alt="maquette 3"><div class="container"></div></a>
   </article>
 </section>
 

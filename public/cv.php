@@ -21,9 +21,9 @@
       <a class="" href="index.php#contact">contact</a>
   </nav>
   <div class="cv">
-    <img src="../img/CV.jpg" alt="mon cv">
+    <img src="../img/CV.webp" alt="mon cv">
     <object data="mypdf.pdf" type="application/pdf" frameborder="0" width="90%" height="600px">
-      <embed src="../img/CV .pdf" width="100%" height="600px"/> 
+      <embed src="../img/CV.pdf" width="100%" height="600px"/> 
     </object>
   </div>
 </body>

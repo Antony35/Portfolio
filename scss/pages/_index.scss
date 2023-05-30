@@ -25,9 +25,9 @@ main {
     position: absolute;
     bottom: 25vh;
     right: 10vw;
-    max-width: 236px;
+    max-width: 320px;
     font-style: italic;
-    text-align: justify;
+    text-align: center;
     letter-spacing: .2rem;
   }
   p {
@@ -35,79 +35,7 @@ main {
   }
 }
 
-.close-burger .burger-line {
-  transform: rotate(405deg);
-  &::before {
-    transform: scale(0);
-  }
-  &::after {
-    transform: rotate(270deg);
-    top: -2px!important;
-  }
-}
 
-.show-side-menu {
-  transition: 300ms ease-in-out;
-  transform: scale(1);
-}
-
-//menu large screen 
-@include medium-plus-screen { 
-nav {
-  transform: scale(1);
-  justify-content: flex-end;  
-  gap: 50px;
-  padding-right: 50px;
-}
-  a {
-    padding: 10px 0!important;
-    background: linear-gradient(to top,  transparent 19%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.8) 23%, transparent 23%) no-repeat;
-    background-size: 0% 100%;
-    transition: background-size .300ms ease-in-out;
-    width: fit-content; 
-  }
-  .active {
-    background-size: 100% 100%;
-  }
-}
-
-.container-arrow {
-  position: absolute;
-  bottom: 20px;
-  right: calc(50% + -10px);
-  background-color: #fff;
-  border-radius: 10px;
-  height: 40px;
-  width: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .arrow-part-1 {
-    height: 25px;
-    width: 3px;
-    border-radius: 10rem;
-    background-color: #1E1D3E;
-    &::before, &::after {
-      content: '';
-      display: block;
-      background-color: #1E1D3E;
-      position: relative;
-      border-radius: 10rem;
-      width: 3px;
-      height: 10px;
-    }
-    &::before {
-      transform: rotate(45deg);
-      left: 3px;
-      top: 15.5px;      
-    }
-    &::after {
-      transform: rotate(-45deg);
-      right: 3px;
-      top: 5.5px;
-    }
-  }
-}
 
 #about {
   padding: 50px 0;
@@ -173,10 +101,13 @@ nav {
     }
   }
 }
+
+
 a {
   color: #fff;
   text-decoration: none;
 .container {
+  text-align: center;
   @include medium-plus-screen {
     display: none;
   }
@@ -218,7 +149,7 @@ a {
     padding: 20px;
     row-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0fr 1fr 1fr;
+    grid-template-rows: 0fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     min-height: calc(100vh - 100px);
@@ -246,9 +177,9 @@ a {
       grid-row: 3/4;
       grid-column: 2/3;
       background-color: #1E1D3E;
-      height: 300px;
-      width: 400px;
-      border-radius: 10rem;
+      height: 200px;
+      width: 25vw;
+      border-radius: 50px;
       justify-content: space-evenly;
       align-items: center;
       color: #fff;
