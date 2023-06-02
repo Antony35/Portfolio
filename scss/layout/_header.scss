@@ -1,0 +1,66 @@
+//this class is add with js to the anchor when the scroll is on the right area
+@include medium-plus-screen {
+  .active {
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transform-origin: left;
+      animation: under-line 200ms ease-in-out 1 forwards;
+    }
+  }
+}
+
+
+@keyframes under-line {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+header {
+  background: no-repeat center left 40% url(../assets/geo.jpg);
+  background-size: cover;
+}
+
+.presentation {
+  color: #fff;
+  position: absolute;
+  top: 20vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  &__name, &__citation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  @include medium-plus-screen {
+    &__name {
+      position: relative;
+      bottom: 5vw;
+      left: 5vw;
+      h2 {
+        padding-left: 40px;
+      }
+    }
+    &__citation {
+      position: relative;
+      left: calc(100vw - 600px);
+      max-width: 400px;
+      line-height: 1.3rem;
+      letter-spacing: .1rem;
+    }
+  }
+}

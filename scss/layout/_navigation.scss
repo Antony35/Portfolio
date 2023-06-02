@@ -1,15 +1,30 @@
-.nav__network {
-  display: none;
-}
-
-
-.burger-bg {
-  background-color: #1E1D3E;
-  border-radius: 10rem;
-}
-
-#open-btn {
-  @media screen and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
+  //container for link of navigation hide with translate add class active with js to reveal it with annimation
+  .nav {
+    position: fixed;
+    min-width: 100vw;
+    z-index: 1;
+    padding: 50px;
+    background-color: $primary;
+    display: flex;
+    transition: 200ms ease-in-out;
+    transform: translateX(-100vw);
+    img {
+      height: 20px;
+    }
+    &__network {
+      display: none;
+    }
+    &__section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+  }
+  //button to open container for link of navigation
+  .button-open-side-menu {
     z-index: 2;
     height: 50px;
     width: 50px;
@@ -19,8 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .burger-line {
-      position: initial;
+    &__burger-line {
       transition: all 300ms ease-in-out;
       background-color: #fff;
       width: 30px;
@@ -43,134 +57,47 @@
       }
     }
   }
-}
-
-
-.nav {
-  position: fixed;
-  min-width: 100vw;
-  z-index: 1;
-  background-color: #1E1D3E;
-  display: flex;
-  img {
-    max-width: 20px;
-  }  
-  &__pages {
-    display: flex;
-    flex-direction: column;
+  //class add with JS onClick button-open-side-menu to reveal container for link of navigation  
+  .show-side-menu {
+    transform: translateX(0);
   }
-  @media screen and (max-width: 1023px) {
-    flex-direction: column;
-    padding: 80px 0 20px 20px;
-    transition: all 100ms ease-in-out;
-    transform-origin: left;
-    transform: scale(0);
-  }
-  a {
-    z-index: 1;
-    transition: all 100ms ease-in-out;
-    width: auto;
-    padding: 10px 50px 10px 10px;
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    @media screen and (max-width: 1023px) {
-      &:active {
-        background-color: lighten(#1E1D3E, 10);
-      }
+  //change position of burger-line to create a cross
+  .close-burger .button-open-side-menu__burger-line{
+    transform: rotate(405deg);
+    &::before {
+      transform: scale(0);
+    }
+    &::after {
+      transform: rotate(270deg);
+      top: -2px!important;
     }
   }
-}
-
-.close-burger .burger-line {
-  transform: rotate(405deg);
-  &::before {
-    transform: scale(0);
+    
   }
-  &::after {
-    transform: rotate(270deg);
-    top: -2px!important;
-  }
-}
-
-.show-side-menu {
-  transition: 300ms ease-in-out;
-  transform: scale(1);
-}
-
-
-//menu large screen 
-@include medium-plus-screen { 
-  .nav {
-    transform: scale(1);
-    justify-content: space-between;  
-    gap: 50px;
-    padding-right: 50px;
-    &__network {
+  
+  @include medium-plus-screen {
+    .nav {
+      height: 50px;
+      width: 100vw;
+      padding: 0 30px;
+      position: fixed;
+      z-index: 1;
+      background-color: $primary;
       display: flex;
-      gap: 50px;
-      padding: 0;
-      padding-left: 50px;
+      align-items: center;
+      justify-content: space-between;
       img {
-        max-width: 25px;
-        &:hover {
-          transform: scale(1.1);
-        }
+        width: 20px;
       }
-    }
-    &__pages {
-      display: flex;
-      gap: 50px;
-      flex-direction: row;
-    } 
-    a {
-      padding: 10px 0!important;
-      background: linear-gradient(to top,  transparent 19%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0.8) 23%, transparent 23%) no-repeat;
-      background-size: 0% 100%;
-      transition: background-size .300ms ease-in-out;
-      width: fit-content;
-    }
-    .active {
-      background-size: 100% 100%;
-    }
-  }
-
-  .container-arrow {
-    position: absolute;
-    bottom: 20px;
-    right: calc(50% + -10px);
-    background-color: #fff;
-    border-radius: 10px;
-    height: 40px;
-    width: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .arrow-part-1 {
-      height: 25px;
-      width: 3px;
-      border-radius: 10rem;
-      background-color: #1E1D3E;
-      &::before, &::after {
-        content: '';
-        display: block;
-        background-color: #1E1D3E;
-        position: relative;
-        border-radius: 10rem;
-        width: 3px;
-        height: 10px;
+      &__network {
+        display: flex;
+        gap: 30px;
       }
-      &::before {
-        transform: rotate(45deg);
-        left: 3px;
-        top: 15.5px;      
-      }
-      &::after {
-        transform: rotate(-45deg);
-        right: 3px;
-        top: 5.5px;
+      &__section {
+        display: flex;
+        gap: 30px;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
       }
     }
   }
-}

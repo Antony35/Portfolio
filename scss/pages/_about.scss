@@ -1,0 +1,57 @@
+//center frame of .about 
+@include medium-plus-screen {
+  #about {
+    padding: 100px 50px 50px;  
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  img {
+    width: 100px;
+    padding: 20px;
+  }
+  &__who-I-am, &__my-vision {
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: .05rem;
+    max-width: 400px;
+  }
+  @include medium-plus-screen {
+    min-height: calc(100vh - 150px);
+    border: 1px solid $primary;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px $primary;
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    &__who-I-am, &__my-vision {
+      height: 100%;
+      min-width: 100%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      &__title, &__title {
+        padding: 50px;
+      }
+      &__text, &__text {
+        padding: 0px 50px 50px;
+        height: 100%;
+      }
+    }
+    &__who-I-am { grid-area: 1 / 1 / 3 / 2; }
+    &__my-vision { grid-area: 1 / 2 / 3 / 3; }
+    img {
+      margin-top: 100px;
+      grid-area: 2 / 2 / 3 / 3;
+      width: 125px;
+      @include large-screen {
+        width: 175px;
+      }
+    }
+  }
+}

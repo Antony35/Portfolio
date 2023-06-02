@@ -1,11 +1,10 @@
-const projects = document.querySelectorAll('.container-project > a > img')
-const projectsLinks = document.querySelectorAll('.container-project > a')
-const containers = document.querySelectorAll('.container-project > a > div')
-const title = document.querySelector('.info > h1')
-const description = document.querySelector('.info > h3')
-const techno = document.querySelector('.info > h5')
+const projects = document.querySelectorAll('.projects > a > img')
+const projectsLinks = document.querySelectorAll('.projects > a')
+const individualsInfos = document.querySelectorAll('.projects > a > div')
+const title = document.querySelector('.projects__info > h1')
+const description = document.querySelector('.projects__info > h3')
+const techno = document.querySelector('.projects__info > h5')
 
-console.log(containers)
 class info {
 	constructor(title, description, techno) {
 		this.title = title
@@ -14,27 +13,27 @@ class info {
 	}
 }
 const infoText = new info('Project', 'Description', 'techno')
-const project1 = new info('We love the world', 'Ce blog raconte mes voyages.', 'html / css / sass / JS / webpack / php')
+const project1 = new info('We love the world', 'Réalisation de mon blog voyage.', 'html / css / sass / JS / webpack / php')
 const project2 = new info('Portfolio', 'Présentation de mes projets', 'html / css / sass / JS / php')
-const project3 = new info('TODO List', 'Gestion de liste de tâche', 'html / css / JS')
-const project4 = new info('La maison jungle', 'Site d\'achat de plante', 'React')
-const project5 = new info('Hardware style', 'Page magasin réaliser pour la semaine de test à CEFIM', 'HTML / css / sass / JS')
+const project3 = new info('TODO List', 'Gestion de liste de tâches', 'html / css / JS')
+const project4 = new info('La maison jungle', 'Site d\'achat de plantes', 'React')
+const project5 = new info('Hardware style', 'Page magasin réalisée pour la semaine de test à CEFIM', 'HTML / css / sass / JS')
 const project6 = new info('Design', 'Maquette trouver sur figma', 'HTML / css')
 const project7 = new info('Page de nike', 'Copie de la premiere page de nike', 'HTML / css / sass')
-const project8 = new info('Benjamin Code', 'Challenge Bajamin Code', 'HTML / css / sass / JS')
+const project8 = new info('Benjamin Code', 'Challenge Benjamin Code', 'HTML / css / sass / JS')
 
 const project = [project1, project2, project3, project4, project5, project6, project7, project8]
 
-containers.forEach((container, index) => {
+individualsInfos.forEach((individualInfo, index) => {
 	let title = document.createElement('h3')
 	let desc = document.createElement('h4')
 	let techno = document.createElement('p')
 	title.innerText = project[index].title
 	desc.innerText = project[index].description
 	techno.innerText = project[index].techno
-	container.appendChild(title)
-	container.appendChild(desc)
-	container.appendChild(techno)
+	individualInfo.appendChild(title)
+	individualInfo.appendChild(desc)
+	individualInfo.appendChild(techno)
 	})
 
 /**

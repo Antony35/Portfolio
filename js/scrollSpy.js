@@ -4,7 +4,6 @@ const spies = document.querySelectorAll('[data-spy]')
 let observer = null
 
 /**
- * 
  * @param {HTMLElement} elem 
  */
 const activated = function(elem) {

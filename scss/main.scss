@@ -9,7 +9,12 @@
 @import "./base/siteBase";
 
 @import "./layout/navigation";
+@import "./layout/header";
 @import "./layout/footer";
 
-@import "./pages/index";
+@import "./pages/about";
+@import "./pages/project";
+@import "./pages/contact";
+@import "./pages/thanks-form";
+@import "./pages/cv";
 @import "./pages/mention";

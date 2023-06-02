@@ -1,0 +1,55 @@
+.burger-bg{
+  background-color: $primary;
+  border-radius: 10rem;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    border-radius: 15px;
+    border: 1px solid $primary;
+    margin: 10px;
+    max-width: 100vw;
+  }
+  // object {
+  //   display: none;
+  // }
+}
+
+@include medium-plus-screen {
+  .cv {
+    img {
+      display: none;
+    }
+    object {
+      display: block;
+    }
+  }
+}
+
+// .cv {
+//   //min-height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   img {
+//     margin-top: 100px;
+//     max-width: 100vw;
+//     @include medium-plus-screen {
+//       display: none;
+//     }
+//   }
+//   object {
+//     margin-top: 50px;
+//     border: 2px solid #1E1D3E;
+//     box-shadow: 5px 5px 5px #1E1D3E;
+//     display: none;
+//     @media screen and (min-width : 1023px) {
+//       display: block;
+//     }
+//   }
+//   }

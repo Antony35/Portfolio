@@ -24,7 +24,7 @@ userName.addEventListener('input', function(e) {
   }
 })
 
-userEmail.addEventListener('change', function(e) {
+userEmail.addEventListener('input', function(e) {
   const value = e.target.value; 
   if(!emailValid(value)){
     emailError.style.display = 'inline';
