@@ -1,0 +1,29 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section__text {
+    h1 {
+        font-family: brico-eb, sans-serif;
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    h2 {
+        margin-top: 5px;
+        font-size: 2rem;
+    }
+}
+
+.hero-section__image {
+    border: solid 3px var(--secondary-color);
+    border-radius: 50%;
+    width: 200px;
+}
+
+.introduction {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
