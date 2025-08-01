@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "brico-eb";
+  src: url("./assets/fonts/bricolage-grotesque/BricolageGrotesque_24pt-ExtraBold.ttf"), format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "brico-sb";
+  src: url("./assets/fonts/bricolage-grotesque/BricolageGrotesque_24pt-SemiBold.ttf"), format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/bricolage-grotesque/BricolageGrotesque_24pt-SemiBold.ttf"), format("truetype");
+  font-weight: normal;
+}
+
+:root {
+    --main-color: #011F2C;
+    --secondary-color: #2F2525;
+    --secondary-color-darken: #e41212;
+    --text-color: #f1f1f1;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-family: brico-sb, sans-serif;
+}
+
+p {
+    font-family: inter, sans-serif;
+}
