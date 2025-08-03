@@ -4,7 +4,7 @@ import Home from './containers/Home/Home'
 
 function App() {
 
-  return (
+  return(
     <>
       <Home />
     </>

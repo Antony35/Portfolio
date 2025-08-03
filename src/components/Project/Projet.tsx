@@ -1,15 +1,19 @@
+import '../Embla/css/embla.css'
 import './Project.css'
 
 interface ProjectProps {
+    index: number,
     name: string,
-    image: string
+    image: string,
+    selectedIndex: number
 }
 
-function Project ({name, image}: ProjectProps) {
+function Project ({index, name, image, selectedIndex}: ProjectProps) {
+
     return (
-        <article className="project">
-            <h3>{name}</h3>
-            <img src={image} alt="project" />
+        <article className="embla__slide">
+            <img className='project__image' src={image} alt="project" />
+            <h3 className={selectedIndex === index ? 'project__name' : 'project__name--none'}>{name}</h3>
         </article>
     )
 }

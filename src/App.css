@@ -16,19 +16,40 @@
   font-weight: normal;
 }
 
+html {
+  container-type: inline-size;
+  container-name: page;
+}
+
 :root {
     --main-color: #011F2C;
     --secondary-color: #2F2525;
-    --secondary-color-darken: #e41212;
+    --secondary-color-darken: #241c1c;
     --text-color: #f1f1f1;
 }
 
 body {
+    margin: 0;
+    padding: 20px;
     background-color: var(--main-color);
     color: var(--text-color);
     font-family: brico-sb, sans-serif;
 }
 
+
+@container page (width > 640px) {
+    body {
+    padding: 0 50px;
+  }
+}
+
 p {
     font-family: inter, sans-serif;
+}
+
+img {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

@@ -1,12 +1,27 @@
-.project {
-    h3 {
-        font-size: 1.5rem;
-    }
-    img {
-        border: solid 3px var(--secondary-color);
-        border-radius: 10px;
-        max-height: 300px;
-        max-width: 98vw;
-    }
+.project__name {
+    font-size: 1.2rem;
+    margin: 5px 3px;
+    opacity: 0;
+    display: block;
+    animation: comeIn .3s .3s ease-in-out forwards;
+
 }
 
+.project__name--none {
+    display: none;
+}
+
+.project__image {
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    height: 145px;
+    overflow: hidden;
+}
+
+@keyframes comeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+}
+  to { opacity: 1; }
+}

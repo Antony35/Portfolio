@@ -4,9 +4,10 @@ Ce projet est un portfolio personnel développé avec **React** et **TypeScript*
 
 ## 🛠️ Technologies utilisées
 
-- [Vite](https://vitejs.dev/) 
+- [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [EmblaCarousel](https://www.embla-carousel.com/)
 
 ## 🚀 Installation
 
