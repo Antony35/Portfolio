@@ -1,0 +1,9 @@
+.wrapper {
+    padding: 20px;
+}
+
+@container page (width > 640px) {
+    .wrapper  {
+    padding: 0 50px;
+  }
+}

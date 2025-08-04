@@ -1,13 +1,106 @@
 .footer {
-    margin: 15px 0 0;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    h3, p {
+        margin: 10px;
+    }
+    p {
+        font-size: .8rem;
+    }
 }
 
 .footer__social {
     display: flex;
+    justify-content: center;
     gap: 10px;
+    margin-top: 10px;
     img {
-        max-height: 30px; 
-        }
+        width: 20px;
+        height: 20px;
+    }
 }
+
+.button--cv {
+    position: relative;
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(47, 37, 37, 0.3);
+    overflow: hidden;
+    opacity: 0;
+    animation: slideInFromBottom 1s ease-out 0.9s forwards;
+}
+
+.button--cv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(241, 241, 241, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.button--cv:hover::before {
+    left: 100%;
+}
+
+.button--cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(47, 37, 37, 0.4);
+    background: linear-gradient(135deg, var(--main-color) 0%, #030e388b 100%);
+}
+
+.button--cv:active {
+    transform: translateY(-1px);
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer__decorative-element {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: 40%;
+            left: 10%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .footer__decorative-element:nth-child(2) {
+            top: 13%;
+            right: 10%;
+            left: auto;
+            animation-delay: 2s;
+            width: 60px;
+            height: 60px;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }

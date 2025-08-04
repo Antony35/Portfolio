@@ -6,8 +6,10 @@ import Footer from '@/containers/Footer/Footer'
 function Home () {
     return (
         <>
+        <div className='wrapper'>
             <Hero />
             <Projects />
+        </div>
             <Footer />
         </>
     )
