@@ -1,9 +1,11 @@
-import { DotButton, useDotButton } from '@/components/Embla/js/EmblaCarouselDotButton'
+import './Projects.css'
+import { useDotButton } from '@/components/Embla/js/hooks/useDotButton'
+import { DotButton } from '@/components/Embla/js/EmblaCarouselDotButton'
 import {
   PrevButton,
   NextButton,
-  usePrevNextButtons
 } from '@/components/Embla/js/EmblaCarouselArrowButtons'
+import { usePrevNextButtons } from '@/components/Embla/js/hooks/usePrevNextButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 import Project from '@/components/Project/Projet'
 import tripShareImage from '@/assets/images/trip-share.webp'

@@ -1,0 +1,10 @@
+.projects {
+    margin: var(--marge-small-screen);
+    margin-top: 70px;
+}
+
+@container page (width > 640px) {
+    .projects {
+        margin: 20px 0;
+    }
+}

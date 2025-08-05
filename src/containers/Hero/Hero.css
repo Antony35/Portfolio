@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--marge-small-screen);
 }
 
 .hero-section__text {
@@ -24,13 +25,30 @@
 
 .introduction {
     background-color: var(--secondary-color);
+    opacity: .87;
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, 1);
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 10px 30px;
+    margin: var(--marge-small-screen);
 }
 
 @container page (width > 640px) {
-    body {
-    padding: 0 50px;
-  }
+    .hero-section {
+        padding: 20px var(--marge-medium-screen);
+    }
+    .introduction {
+    margin: 20px var(--marge-medium-screen);
+    }
+   .hero-section__text {
+        h1 {
+            font-size: 3rem;
+        }    
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    .hero-section__image {
+        width: 220px;
+    }
 }

@@ -15,6 +15,7 @@ function Project ({index, name, image, selectedIndex}: ProjectProps) {
             <img className='project__image' src={image} alt="project" />
             <h3 className={selectedIndex === index ? 'project__name' : 'project__name--none'}>{name}</h3>
         </article>
+
     )
 }
 
