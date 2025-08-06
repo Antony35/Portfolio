@@ -9,6 +9,8 @@ function Footer() {
         <footer className='footer'>
             <div className="footer__decorative-element"></div>
             <div className="footer__decorative-element"></div>
+            <div className="footer__decorative-element"></div>
+            <div className="footer__decorative-element"></div>
             <h3>Découvrez Mon Parcours</h3>
             <a href={cv} className="button--cv">Télécharger Mon CV</a>
             <div className='footer__social'>

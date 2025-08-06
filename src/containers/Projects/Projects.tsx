@@ -11,7 +11,9 @@ import Project from '@/components/Project/Projet'
 import tripShareImage from '@/assets/images/trip-share.webp'
 import survivalGameImage from '@/assets/images/survival-react.webp'
 import pcAgencyImage from '@/assets/images/pc-agency.webp'
-
+import nike from '@/assets/images/nike.webp'
+import design from '@/assets/images/design.webp'
+import benjaminCode from '@/assets/images/benjamin-code.webp'
 
 function Projects () {
 
@@ -36,9 +38,11 @@ function Projects () {
                         <Project index={0} name='Trip-share' image={tripShareImage} selectedIndex={selectedIndex}/>
                         <Project index={1} name='Survival-game' image={survivalGameImage} selectedIndex={selectedIndex}/>
                         <Project index={2} name='pc-agency' image={pcAgencyImage} selectedIndex={selectedIndex}/>
+                        <Project index={3} name='Nike' image={nike} selectedIndex={selectedIndex}/>
+                        <Project index={4} name='Design' image={design} selectedIndex={selectedIndex}/>
+                        <Project index={5} name='Benjamin-code' image={benjaminCode} selectedIndex={selectedIndex}/>
                     </div>
                 </div>
-
                 <div className="embla__controls">
                     <div className="embla__buttons">
                         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />

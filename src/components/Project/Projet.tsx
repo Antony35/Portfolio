@@ -12,7 +12,7 @@ function Project ({index, name, image, selectedIndex}: ProjectProps) {
 
     return (
         <article className="embla__slide">
-            <img className='project__image' src={image} alt="project" />
+            <img className='embla__slide__img' src={image} alt="project" />
             <h3 className={selectedIndex === index ? 'project__name' : 'project__name--none'}>{name}</h3>
         </article>
 

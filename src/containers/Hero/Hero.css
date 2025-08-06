@@ -52,3 +52,32 @@
         width: 220px;
     }
 }
+
+@container page (width > 800px) {
+    .hero-section {
+        padding: 20px var(--marge-large-screen);
+    }
+    .introduction {
+    margin: 20px var(--marge-large-screen);
+    }
+   .hero-section__text {
+        h1 {
+            font-size: 3.2rem;
+        }    
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+    .hero-section__image {
+        width: 240px;
+    }
+}
+
+@container page (width > 1440px) {
+    .hero-section {
+        padding: 20px var(--marge-extra-large-screen);
+    }
+    .introduction {
+    margin: 20px var(--marge-extra-large-screen);
+    }
+}

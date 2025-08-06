@@ -5,6 +5,27 @@
 
 @container page (width > 640px) {
     .projects {
-        margin: 20px 0;
+        margin: 0;
+        h2 {
+            margin: 40px var(--marge-medium-screen);
+        }
+    }
+}
+
+@container page (width > 800px) {
+    .projects {
+        margin: 0;
+        h2 {
+            margin: 40px var(--marge-large-screen);
+        }
+    }
+}
+
+@container page (width > 1440px) {
+    .projects {
+        margin: 0;
+        h2 {
+            margin: 40px var(--marge-extra-large-screen);
+        }
     }
 }

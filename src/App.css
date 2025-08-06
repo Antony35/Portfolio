@@ -27,7 +27,8 @@ html {
     --text-color: #f1f1f1;
     --marge-small-screen: 20px;
     --marge-medium-screen: 60px;
-    --marge-large-screen: 100px;
+    --marge-large-screen: 120px;
+    --marge-extra-large-screen: 350px;
 }
 
 body {
