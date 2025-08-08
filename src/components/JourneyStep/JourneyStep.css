@@ -1,0 +1,108 @@
+.journey-step__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    gap: 1rem;
+    > * {
+        z-index: 99;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    h3 {
+        font-size: .9rem;
+        max-width: 25vw;
+    }
+    p {
+        font-size: .5rem;
+        max-width: 25vw;
+    }
+    img {
+        width: 60px;
+        border-radius: 50px;
+    }
+}
+
+.journey__container {
+    div:nth-child(odd) {
+        flex-direction: row-reverse;
+        div:nth-child(2) {
+            position: relative;
+            right: calc(80px - 10vw);
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.journey__container {
+    div:nth-child(even) {
+        div:nth-child(2) {
+            position: relative;
+            left: calc(80px - 10vw);
+        }
+    }
+}
+
+.journey__container {
+    div:nth-child(odd) {
+        div:nth-child(1) {
+            position: relative;
+            left: calc(1px + 10vw);
+        }
+    }
+}
+
+.journey__container {
+    div:nth-child(even) {
+        div:nth-child(1) {
+            position: relative;
+            left: calc(1px - 10vw);
+        }
+    }
+}
+
+/* vertical line */
+.journey-step__container::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: .5rem;
+    height: 110%;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+/* horizontal line from img to vertical line */
+.journey-step__container:nth-child(odd):after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(-325%, -50%)rotate(90deg);
+        width: .5rem;
+        height: 60%;
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        z-index: 1;
+}
+
+.journey-step__container:nth-child(even):after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(325%, -50%)rotate(90deg);
+        width: .5rem;
+        height: 60%;
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        z-index: 1;
+}
+
+.journey-step_img_and_date {
+    display: flex;
+    gap: .5rem;
+}
