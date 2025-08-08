@@ -12,7 +12,7 @@ function JourneyStep ({img, alt, name, date, description }: JourneyStepProps) {
 
     return (
         <div className='journey-step__container'>
-            <div className='ourney-step__container_text'>
+            <div className='journey-step__container_text'>
                 <h3>{name}</h3>
                 <p>{description}</p>
             </div>

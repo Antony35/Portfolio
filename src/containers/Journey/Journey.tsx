@@ -13,22 +13,22 @@ function Journey () {
             <h2>Mon parcours</h2>
             <div className='journey__container'>
                 <JourneyStep img={bulb} alt="bulb" name="Electricien" date="2010"
-                description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.." 
+                description="Apprenti dans une équipe de 3. Plongé dans l'électricité et aux côtés des différents corps de métier de la construction."
                 />
                 <JourneyStep img={fourtyTwo} alt="fourtyTwo" name="École 42" date="2016"
-                description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.." 
+                description="Mes première ligne de code en C++ lors de la piscine 2016. Une expérience intense qui m'a ouvert de nouvelles perspectives."
                 />
                 <JourneyStep img={key} alt="key" name="Responsable Maintenance" date="2017"
-                description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.." 
+                description="Deux ans à Val Thorens. Organisation, réparations et dénichage de fournisseurs pour redonner vie à une résidence." 
                 />
                 <JourneyStep img={plane} alt="plane" name="Voyage" date="2020"
-                description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.." 
+                description="Trois ans d'aventures en Nouvelle-Zélande et Australie via PVT. Puis cap sur le Vietnam, Cambodge et Laos avant le retour." 
                 />
                 <JourneyStep img={computer} alt="computer" name="Développeur web" date="2023"
-                description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.." 
+                description="Reconversion réussie avec le CEFIM et TLD. Apprentissage des bases : HTML, CSS, JS, PHP et Figma." 
                 />
                 <JourneyStep img={copy} alt="copy" name="Concepteur d'application" date="2024"
-                description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.." 
+                description="Direction sur Symfony, Vue et React. Gestion de projet et automatisation avec mise en place d'outils devOp." 
                 />
             </div>
         </section>

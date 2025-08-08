@@ -12,8 +12,7 @@
 
 @container page (width > 640px) {
     .journey {
-        margin: 0;
-        h2 {
+        > h2 {
             margin: 40px var(--marge-medium-screen);
         }
     }
@@ -21,18 +20,23 @@
 
 @container page (width > 800px) {
     .journey {
-        margin: 0;
-        h2 {
+        > h2 {
             margin: 40px var(--marge-large-screen);
         }
     }
 }
 
+@container page (width >= 1024px) {
+    .journey__container {
+        flex-direction: row;
+    }
+}
+
 @container page (width > 1440px) {
     .journey {
-        margin: 0;
-        h2 {
+        > h2 {
             margin: 40px var(--marge-extra-large-screen);
         }
     }
 }
+
