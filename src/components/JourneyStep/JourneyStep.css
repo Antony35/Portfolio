@@ -121,7 +121,7 @@
             z-index: 99;
         }
         h2 {
-            margin: 0;
+            margin: .5rem;
         }
         h3 {
             display: flex;
@@ -130,8 +130,10 @@
             height: 46px;
         }
         p {
-              height: 150px;
+            height: 150px;
             font-size: .9rem;
+            text-align: center;
+            padding: 0 20px;
         }
         img {
             width: 60px;
@@ -157,7 +159,7 @@
     .journey-step__container::before {
         content: '';
         position: absolute;
-        bottom: 82%;
+        bottom: 78%;
         width: 130%;
         height: .5rem;
         overflow: hidden;
