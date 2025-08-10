@@ -8,6 +8,7 @@ Ce projet est un portfolio personnel développé avec **React** et **TypeScript*
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [EmblaCarousel](https://www.embla-carousel.com/)
+- [Vanta JS](https://github.com/tengbao/vanta)
 
 ## 🚀 Installation
 

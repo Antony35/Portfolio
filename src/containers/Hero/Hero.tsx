@@ -1,11 +1,28 @@
+import {useState, useEffect, useRef } from 'react';
 import './Hero.css'
 import avatar from '@/assets/images/avatar-min.webp'
-
-
+import FOG from 'vanta/dist/vanta.fog.min'
 function Hero () {
-    return (
+
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+
+ useEffect(() => {
+  console.log(vantaEffect)
+  if (!vantaEffect) {
+      setVantaEffect(FOG({
+        el: myRef.current
+      }))
+    }
+     return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+ }, [vantaEffect])
+
+
+  return (
         <>
-            <header className="hero-section">
+            <header className="hero-section" ref={myRef}>
                 <div className="hero-section__text">
                     <h1>ANTONY<br />HUART</h1>
                     <h2>Concepteur<br />Développeur<br />D'application<br /></h2>
