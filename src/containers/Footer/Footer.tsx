@@ -19,6 +19,7 @@ function Footer() {
                 <a href="https://www.linkedin.com/in/antony-huart/"><img src={linkedin} alt="linkedin" /></a>
             </div>
             <p>&copy; 2025 - Huart Antony - Tous droits réservés</p>
+            <p>&copy; header Designed by Freepik</p>
         </footer>
     )
 }
