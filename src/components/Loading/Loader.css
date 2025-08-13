@@ -1,0 +1,347 @@
+.Loader {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg,rgba(13, 20, 64, 1) 0%, rgba(17, 30, 93, 1) 33%, rgba(19, 54, 171, 1) 66%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated geometric background */
+.Loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(10, 173, 237, 0.02) 50px,
+      rgba(10, 173, 237, 0.02) 52px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(255, 120, 200, 0.02) 60px,
+      rgba(255, 120, 200, 0.02) 62px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 80px,
+      rgba(120, 255, 214, 0.01) 80px,
+      rgba(120, 255, 214, 0.01) 82px
+    );
+  animation: gridMove 30s linear infinite reverse;
+}
+
+@keyframes geometricShift {
+  0% { transform: translate(0, 0) rotate(0deg); background-position: 0 0, 0 0, 0 0; }
+  25% { transform: translate(-50px, 30px) rotate(90deg); background-position: 100px 50px, 50px 100px, 75px 25px; }
+  50% { transform: translate(30px, -50px) rotate(180deg); background-position: 200px 100px, 100px 200px, 150px 50px; }
+  75% { transform: translate(-30px, -30px) rotate(270deg); background-position: 300px 150px, 150px 300px, 225px 75px; }
+  100% { transform: translate(0, 0) rotate(360deg); background-position: 400px 200px, 200px 400px, 300px 100px; }
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, 20px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Main loader container */
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Code-inspired loader */
+.code-loader {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #0added;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.code-line {
+  opacity: 0;
+  animation: typewriter 0.8s ease-in-out forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #0added;
+  margin: 0.5rem 0;
+}
+
+.code-line:nth-child(1) { animation-delay: 0s; }
+.code-line:nth-child(2) { animation-delay: 0.6s; }
+.code-line:nth-child(3) { animation-delay: 1.2s; }
+
+@keyframes typewriter {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Cursor blink animation */
+.code-line::after {
+  content: '';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { border-color: #0added; }
+  51%, 100% { border-color: transparent; }
+}
+
+/* Spinning geometric loader */
+.geometric-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 2rem 0;
+}
+
+.geometric-loader::before,
+.geometric-loader::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.geometric-loader::before {
+  width: 80px;
+  height: 80px;
+  border: 3px solid transparent;
+  border-top: 3px solid #0added;
+  border-right: 3px solid #0added;
+}
+
+.geometric-loader::after {
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 10px;
+  border: 3px solid transparent;
+  border-bottom: 3px solid #865DFF;
+  border-left: 3px solid #865DFF;
+  animation-direction: reverse;
+  animation-duration: 1.5s;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Progress bar */
+.progress-container {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0added, #78C8FF, #865DFF);
+  background-size: 200% 100%;
+  border-radius: 2px;
+  animation: progressLoad 2s ease-in-out forwards, gradientShift 3s ease-in-out infinite;
+  transform-origin: left;
+}
+
+@keyframes progressLoad {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Loading text */
+.loading-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Floating geometric shapes */
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-element {
+  position: absolute;
+  opacity: 0.4;
+}
+
+.floating-element:nth-child(1) {
+  top: 15%;
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #0added, transparent);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: floatTriangle 8s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+  top: 70%;
+  left: 85%;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(135deg, #865DFF, transparent);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  animation: floatOctagon 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.floating-element:nth-child(3) {
+  top: 85%;
+  left: 25%;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(90deg, #0added, transparent);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  animation: floatHexagon 12s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.floating-element:nth-child(4) {
+  top: 25%;
+  left: 75%;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(225deg, #0added, transparent);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: floatStar 9s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.floating-element:nth-child(5) {
+  top: 50%;
+  left: 10%;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(315deg, #0added, transparent);
+  transform: rotate(45deg);
+  animation: floatDiamond 7s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.floating-element:nth-child(6) {
+  top: 10%;
+  left: 60%;
+  width: 22px;
+  height: 22px;
+  background: conic-gradient(from 0deg, #865DFF, #0added, #78C8FF, #0added, #865DFF);
+  border-radius: 50%;
+  animation: floatCircle 11s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatTriangle {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  33% { transform: translateY(-30px) rotate(120deg) scale(1.1); }
+  66% { transform: translateY(15px) rotate(240deg) scale(0.9); }
+}
+
+@keyframes floatOctagon {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-25px) rotate(180deg) scale(1.2); }
+}
+
+@keyframes floatHexagon {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); opacity: 0.4; }
+  25% { transform: translateY(-20px) rotate(90deg) scale(1.1); opacity: 0.6; }
+  75% { transform: translateY(10px) rotate(270deg) scale(0.8); opacity: 0.3; }
+}
+
+@keyframes floatStar {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-35px) rotate(360deg) scale(1.3); }
+}
+
+@keyframes floatDiamond {
+  0%, 100% { transform: translateY(0px) rotate(45deg) scale(1); }
+  50% { transform: translateY(-20px) rotate(225deg) scale(1.1); }
+}
+
+@keyframes floatCircle {
+  0%, 100% { transform: translateY(0px) scale(1); filter: hue-rotate(0deg); }
+  33% { transform: translateY(-25px) scale(1.2); filter: hue-rotate(120deg); }
+  66% { transform: translateY(10px) scale(0.9); filter: hue-rotate(240deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .code-loader {
+    font-size: 1rem;
+  }
+  
+  .progress-container {
+    width: 250px;
+  }
+  
+  .geometric-loader {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .geometric-loader::before {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .geometric-loader::after {
+    width: 45px;
+    height: 45px;
+    top: 7.5px;
+    left: 7.5px;
+  }
+}
