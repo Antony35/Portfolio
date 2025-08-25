@@ -2,6 +2,7 @@ import './App.css'
 import Loader from '@/components/Loading/Loader'
 import Home from '@/containers/Home/Home'
 import { useState } from 'react'
+import FollowingMouse from './components/Mouse/FollowingMouse'
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
   }
 
   return (
+    <>
+    <FollowingMouse />
     <div className={(showLoader) ? 'app-container' : ''}>
       {showLoader && (
          <Loader isLoad={isLoad} fadeOut={transition} />
@@ -24,6 +27,9 @@ function App() {
         <Home />
       </div>
     </div>
+  
+    </>
+    
   )
 }
 

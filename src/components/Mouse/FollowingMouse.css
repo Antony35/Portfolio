@@ -1,0 +1,11 @@
+.mouse-circle {
+    position: fixed;
+    top: -15px;
+    left: -15px;
+    width: 35px;
+    height: 35px;
+    border: 4px solid #a47764;
+    border-radius: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
