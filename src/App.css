@@ -22,26 +22,28 @@ html {
 }
 
 :root {
-    --main-color: #011F2C;
-    --secondary-color: #2F2525;
-    --text-color: #f1f1f1;
-    --marge-small-screen: 20px;
-    --marge-medium-screen: 60px;
-    --marge-large-screen: 120px;
-    --marge-extra-large-screen: 350px;
+  --main-color: #011F2C;
+  --secondary-color: #362828;
+  --text-color: #f1f1f1;
+  --marge-small-screen: 20px;
+  --marge-medium-screen: 60px;
+  --marge-large-screen: 120px;
+  --marge-extra-large-screen: 350px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    font-family: brico-sb, sans-serif;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-family: brico-sb, sans-serif;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 p {
-    font-family: inter, sans-serif;
+  font-family: inter, sans-serif;
 }
 
 img {
@@ -49,4 +51,20 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.app-container {
+  max-height: 100vh;
+  max-width: 200vw;
+  display: flex;
+  overflow: hidden;
+}
+
+.fade-in {
+  animation: fadeIn .4s ease-in-out .3s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0%);}
 }

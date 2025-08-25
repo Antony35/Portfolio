@@ -1,69 +1,32 @@
-.Loader {
+.loader-container {
+  display: flex;
+}
+
+.loader {
   height: 100vh;
-  width: 100%;
+  min-width: 100vw;
+  overflow: hidden;
   background: linear-gradient(90deg,rgba(13, 20, 64, 1) 0%, rgba(17, 30, 93, 1) 33%, rgba(19, 54, 171, 1) 66%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 
-/* Animated geometric background */
-.Loader::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.transition-bg {
   height: 100%;
-}
-
-.Loader::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-image: 
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgba(10, 173, 237, 0.02) 50px,
-      rgba(10, 173, 237, 0.02) 52px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 60px,
-      rgba(255, 120, 200, 0.02) 60px,
-      rgba(255, 120, 200, 0.02) 62px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 80px,
-      rgba(120, 255, 214, 0.01) 80px,
-      rgba(120, 255, 214, 0.01) 82px
-    );
-  animation: gridMove 30s linear infinite reverse;
+  background-color: red;
 }
 
-@keyframes geometricShift {
-  0% { transform: translate(0, 0) rotate(0deg); background-position: 0 0, 0 0, 0 0; }
-  25% { transform: translate(-50px, 30px) rotate(90deg); background-position: 100px 50px, 50px 100px, 75px 25px; }
-  50% { transform: translate(30px, -50px) rotate(180deg); background-position: 200px 100px, 100px 200px, 150px 50px; }
-  75% { transform: translate(-30px, -30px) rotate(270deg); background-position: 300px 150px, 150px 300px, 225px 75px; }
-  100% { transform: translate(0, 0) rotate(360deg); background-position: 400px 200px, 200px 400px, 300px 100px; }
+.fade-out {
+  animation: fadeOut .4s ease-in 0s 1 normal forwards;
 }
 
-@keyframes gridMove {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-20px, 20px) scale(1.02); }
-  100% { transform: translate(0, 0) scale(1); }
+@keyframes fadeOut {
+  from {transform: translateX(0%);}
+  to {transform: translateX(-100%);}
 }
 
 /* Main loader container */
@@ -76,7 +39,6 @@
 
 /* Code-inspired loader */
 .code-loader {
-  font-family: 'Courier New', monospace;
   font-size: 1.2rem;
   color: #0added;
   text-align: center;
@@ -94,8 +56,6 @@
 }
 
 .code-line:nth-child(1) { animation-delay: 0s; }
-.code-line:nth-child(2) { animation-delay: 0.6s; }
-.code-line:nth-child(3) { animation-delay: 1.2s; }
 
 @keyframes typewriter {
   from {
@@ -345,3 +305,5 @@
     left: 7.5px;
   }
 }
+
+/* Loader transition */
