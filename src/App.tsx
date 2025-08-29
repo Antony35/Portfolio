@@ -13,7 +13,7 @@ function App() {
     setTransition(true)
     setTimeout(() => {
       setShowLoader(false)
-    }, 400)
+    }, 600)
   }
 
   return (

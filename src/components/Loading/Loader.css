@@ -21,7 +21,7 @@
 }
 
 .fade-out {
-  animation: fadeOut .4s ease-in 0s 1 normal forwards;
+  animation: fadeOut .5s ease-in 0s 1 normal forwards;
 }
 
 @keyframes fadeOut {
@@ -136,7 +136,7 @@
   background: linear-gradient(90deg, #0added, #78C8FF, #865DFF);
   background-size: 200% 100%;
   border-radius: 2px;
-  animation: progressLoad 2s ease-in-out forwards, gradientShift 3s ease-in-out infinite;
+  animation: progressLoad 3s ease-in-out forwards, gradientShift 3s ease-in-out infinite;
   transform-origin: left;
 }
 
@@ -305,5 +305,3 @@
     left: 7.5px;
   }
 }
-
-/* Loader transition */

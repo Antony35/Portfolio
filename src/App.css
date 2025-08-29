@@ -62,7 +62,7 @@ img {
 }
 
 .fade-in {
-  animation: fadeIn .4s ease-in-out .3s 1 normal forwards;
+  animation: fadeIn .5s ease-in-out .6s 1 normal forwards;
 }
 
 @keyframes fadeIn {

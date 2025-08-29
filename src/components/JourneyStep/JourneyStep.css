@@ -140,7 +140,7 @@
             border-radius: 50px;
         }
     }
-
+    
     .journey-step_img_and_date {
         display: flex;
         justify-content: center;
@@ -167,4 +167,18 @@
         background-color: var(--secondary-color);
         z-index: 1;
     }
+    .journey-step__container.animate {
+        animation: slidingShow 0.6s ease-out forwards;
+    }
+}
+
+@keyframes slidingShow {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

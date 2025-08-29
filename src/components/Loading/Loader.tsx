@@ -20,9 +20,9 @@ function Loader({
     const loadEverything = async (): Promise<void> => {
         try {
           const imagePromises = imagesToPreload.map(src => preloadImage(src))
-        
+
           await Promise.all([
-            new Promise<void>(resolve => setTimeout(resolve, 2000)),
+            new Promise<void>(resolve => setTimeout(resolve, 3000)),
             import('@/containers/Home/Home'),
             ...imagePromises
           ])

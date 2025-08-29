@@ -1,13 +1,18 @@
+.hide {
+    opacity: 0;
+}
+
 .journey {
     margin: var(--marge-small-screen);
     margin-top: 70px;
+    opacity: 1;
+    transition: opacity .2s ease-out 0s;
 }
 
 .journey__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
 }
 
 @container page (width > 640px) {
@@ -29,6 +34,9 @@
 @container page (width >= 1024px) {
     .journey__container {
         flex-direction: row;
+    }
+    .journey__container > * {
+        opacity: 0;
     }
 }
 
