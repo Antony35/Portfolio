@@ -1,8 +1,11 @@
 .wrapper-hero {
-    background-image: url('/src/assets/images/bg-leaf.svg');
-    background-size: cover;     
-    background-position: 35% 0;
+    background-image: url('../../assets/images/bg-hero.png');
+    background-size: cover;
     min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+     background-size: cover;
 }
 
 .hero-section {
@@ -13,7 +16,7 @@
     position: relative;
 }
 
-.hero-section__text {
+.hero-section__text {z
     h1 {
         font-family: brico-eb, sans-serif;
         font-size: 2.3rem;

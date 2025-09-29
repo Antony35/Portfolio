@@ -1,6 +1,6 @@
-.projects {
-    margin: var(--marge-small-screen);
-    margin-top: 70px;
+.projects { 
+    padding: var(--marge-small-screen);
+    padding-top: 70px;
 }
 
 @container page (width > 640px) {

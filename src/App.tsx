@@ -1,35 +1,29 @@
 import './App.css'
-import Loader from '@/components/Loading/Loader'
 import Home from '@/containers/Home/Home'
-import { useState } from 'react'
 import FollowingMouse from './components/Mouse/FollowingMouse'
+import { useEffect, useState } from 'react'
+import Loader from './components/Loading/Loader'
 
 function App() {
 
-  const [showLoader, setShowLoader] = useState(true);
-  const [transition, setTransition] = useState(false);
+  const [loading, setIsLoading] = useState(true)
+  const [fade, setFade] = useState(false)
 
-  const isLoad = () => {
-    setTransition(true)
+
+  useEffect(() => {
     setTimeout(() => {
-      setShowLoader(false)
-    }, 600)
-  }
+      setFade(true)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 500)
+    }, 1000)
+  }, [])
 
   return (
     <>
-    <FollowingMouse />
-    <div className={(showLoader) ? 'app-container' : ''}>
-      {showLoader && (
-         <Loader isLoad={isLoad} fadeOut={transition} />
-      )}
-      <div className={transition ? 'fade-in' : ''}>
-        <Home />
-      </div>
-    </div>
-  
+        <FollowingMouse />
+        {loading ? <Loader fadeOut={fade} /> : <Home  fadeIn={fade} />}
     </>
-    
   )
 }
 

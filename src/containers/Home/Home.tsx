@@ -4,14 +4,22 @@ import Projects from '@/containers/Projects/Projects'
 import Footer from '@/containers/Footer/Footer'
 import Journey from '../Journey/Journey'
 
-function Home () {
+interface IHome {
+    fadeIn: boolean
+}
+
+function Home ({fadeIn}: IHome) {
+ 
     return (
-        <>
+        <div className={fadeIn ? 'home fade-in' : ''}>
             <Hero />
-            <Journey />
-            <Projects />
-            <Footer />
-        </>
+            <div>
+                <Journey />
+                <Projects />
+                <Footer />
+            </div>
+            
+        </div>
     )
 }
 

@@ -136,7 +136,7 @@
   background: linear-gradient(90deg, #0added, #78C8FF, #865DFF);
   background-size: 200% 100%;
   border-radius: 2px;
-  animation: progressLoad 3s ease-in-out forwards, gradientShift 3s ease-in-out infinite;
+  animation: progressLoad 1s ease-in-out forwards, gradientShift 3s ease-in-out infinite;
   transform-origin: left;
 }
 

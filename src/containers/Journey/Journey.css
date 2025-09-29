@@ -3,8 +3,8 @@
 }
 
 .journey {
-    margin: var(--marge-small-screen);
-    margin-top: 70px;
+    padding: var(--marge-small-screen);
+    padding-top: 70px;
     opacity: 1;
     transition: opacity .2s ease-out 0s;
 }

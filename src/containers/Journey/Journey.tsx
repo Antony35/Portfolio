@@ -9,6 +9,8 @@ import JourneyStep from '@/components/JourneyStep/JourneyStep'
 import useIntersectionObserver from '@/hooks/IntersectionObserver'
 
 function Journey () {
+
+
     const { targetRef, isIntersecting } = useIntersectionObserver({
         threshold: .1, // Trigger when 30% of the element is visible
         rootMargin: '0px 0px', // Trigger 50px before entering the viewport

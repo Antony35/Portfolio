@@ -10,19 +10,13 @@
   font-weight: normal;
 }
 
-@font-face {
-  font-family: "inter";
-  src: url("./assets/fonts/bricolage-grotesque/BricolageGrotesque_24pt-SemiBold.ttf"), format("truetype");
-  font-weight: normal;
-}
-
 html {
   container-type: inline-size;
   container-name: page;
 }
 
 :root {
-  --main-color: #011F2C;
+  --main-color: #03082e;
   --secondary-color: #362828;
   --text-color: #f1f1f1;
   --marge-small-screen: 20px;
@@ -59,13 +53,4 @@ img {
   max-width: 200vw;
   display: flex;
   overflow: hidden;
-}
-
-.fade-in {
-  animation: fadeIn .5s ease-in-out .6s 1 normal forwards;
-}
-
-@keyframes fadeIn {
-  from {transform: translateX(100%);}
-  to {transform: translateX(0%);}
 }

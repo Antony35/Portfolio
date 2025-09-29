@@ -1,0 +1,12 @@
+.home {
+    transform: translate(100%);
+}
+
+.fade-in {
+  animation: fadeIn .5s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0%);}
+}
